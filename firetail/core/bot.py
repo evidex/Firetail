@@ -13,7 +13,8 @@ from dateutil.relativedelta import relativedelta
 if os.getenv("CONFIG") is not None:
     if not os.path.exists(os.getenv("CONFIG") + "/config.py"):
         print("Copying example_config.py to " + os.getenv("CONFIG") + "/config.py")
-        copyfile("/firetail/firetail/example_config.py", "/config/config.py") # for some reason os.getcwd() doesn't work inside a container ??
+        copyfile(os.path.join(os.getcwd(),"example_config.py"),
+                 os.path.join(os.getenv("CONFIG"), "config.py"))
         sys.exit(1)
 
 if os.getenv("CONFIG") is not None:

@@ -1,0 +1,13 @@
+version: '2'
+services:
+  firetail:
+    restart: always
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+      args:
+        - git_remote
+        - git_branch
+    container_name: discord-firetail
+    volumes:
+      - "./config:/etc/firetail"
