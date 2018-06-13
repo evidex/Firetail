@@ -32,7 +32,8 @@ setup(
         'pytz',
         'youtube_dl',
         'aiohttp>=3.2.0',
-        'feedparser'
+        'feedparser',
+        'dateparser'
     ],
 
     dependency_links=[
