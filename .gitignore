@@ -59,6 +59,7 @@ __pycache__/
 
 # Config ignore
 firetail/config.py
+*/config.py
 
 # Distribution / packaging
 develop-eggs/
@@ -67,3 +68,6 @@ eggs/
 .installed.cfg
 *.egg
 .vscode/
+
+# Sqlite
+*.sqlite
