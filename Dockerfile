@@ -3,7 +3,7 @@ FROM library/python
 ARG git_remote=https://github.com/shibdib/Firetail.git
 ARG git_branch=master
 
-RUN git clone --single-branch -b $git_branch $git_remote /firetail
+RUN git clone --single-branch --depth 1 -b $git_branch $git_remote /firetail
 RUN pip3 install --process-dependency-links -e /firetail
 RUN mkdir -p /etc/firetail || true
 
